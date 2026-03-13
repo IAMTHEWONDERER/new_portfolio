@@ -92,7 +92,7 @@ export default function InteractiveStarsBg() {
             <Canvas camera={{ position: [0, 18, 42], fov: 60 }} gl={{ alpha: false, antialias: true }}>
                 <RealStars />
                 <DustStars />
-                <OrbitControls enablePan={false} enableZoom={false} autoRotate autoRotateSpeed={0.3} rotateSpeed={0.4} />
+                <OrbitControls enablePan={false} enableZoom={false} autoRotate autoRotateSpeed={0.06} rotateSpeed={0.15} />
             </Canvas>
         </div>
     )
