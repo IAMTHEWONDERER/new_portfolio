@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { motion } from 'framer-motion'
+import InteractiveStarsBg from '../components/InteractiveStarsBg'
 
 /**
  * Content for each planet — mapped to user's background sections.
@@ -75,93 +76,17 @@ export default function PlanetPage({ planet, onReturn }) {
     const data = PLANET_CONTENT[planet]
     if (!data) return null
 
-    // Generate stars once
-    const stars = useMemo(() =>
-        Array.from({ length: 200 }, (_, i) => ({
-            id: i,
-            x: Math.random() * 100,
-            y: Math.random() * 300, // spread across scrollable height
-            size: Math.random() * 2 + 0.5,
-            opacity: Math.random() * 0.7 + 0.1,
-            duration: Math.random() * 40 + 30,
-            delay: Math.random() * -40,
-        })),
-        [])
-
-    // Galaxy nebulae
-    const galaxies = useMemo(() => [
-        { x: 15, y: 20, size: 280, color: `${data.color}15`, rotation: 25 },
-        { x: 75, y: 55, size: 220, color: 'rgba(100,120,255,0.06)', rotation: -15 },
-        { x: 40, y: 85, size: 300, color: `${data.color}0A`, rotation: 40 },
-    ], [data.color])
-
     return (
         <div
             style={{
                 position: 'relative',
                 minHeight: '100vh',
-                background: '#000', color: '#FFF',
+                background: 'transparent', color: '#FFF',
                 overflowX: 'hidden',
             }}
         >
-            {/* CSS for star animations */}
-            <style>{`
-                @keyframes starDrift {
-                    0% { transform: translate(0, 0); }
-                    25% { transform: translate(12px, -8px); }
-                    50% { transform: translate(-6px, 14px); }
-                    75% { transform: translate(8px, 6px); }
-                    100% { transform: translate(0, 0); }
-                }
-                @keyframes galaxySpin {
-                    from { transform: translate(-50%, -50%) rotate(0deg); }
-                    to { transform: translate(-50%, -50%) rotate(360deg); }
-                }
-                @keyframes starTwinkle {
-                    0%, 100% { opacity: var(--star-opacity); }
-                    50% { opacity: calc(var(--star-opacity) * 0.3); }
-                }
-            `}</style>
-
-            {/* Moving star field */}
-            <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-                {stars.map(star => (
-                    <div
-                        key={star.id}
-                        style={{
-                            position: 'absolute',
-                            left: `${star.x}%`,
-                            top: `${star.y}%`,
-                            width: star.size,
-                            height: star.size,
-                            borderRadius: '50%',
-                            background: '#FFF',
-                            '--star-opacity': star.opacity,
-                            opacity: star.opacity,
-                            animation: `starDrift ${star.duration}s ease-in-out ${star.delay}s infinite, starTwinkle ${star.duration * 0.6}s ease-in-out ${star.delay}s infinite`,
-                        }}
-                    />
-                ))}
-
-                {/* Galaxy nebulae — soft glowing ellipses */}
-                {galaxies.map((g, i) => (
-                    <div
-                        key={i}
-                        style={{
-                            position: 'absolute',
-                            left: `${g.x}%`,
-                            top: `${g.y}%`,
-                            width: g.size,
-                            height: g.size * 0.5,
-                            borderRadius: '50%',
-                            background: `radial-gradient(ellipse at center, ${g.color} 0%, transparent 70%)`,
-                            transform: `translate(-50%, -50%) rotate(${g.rotation}deg)`,
-                            filter: 'blur(30px)',
-                            animation: `galaxySpin ${200 + i * 80}s linear infinite`,
-                        }}
-                    />
-                ))}
-            </div>
+            <InteractiveStarsBg />
+            <div className="absolute inset-0 bg-black/40 -z-0 pointer-events-none" />
 
             {/* Content */}
             <div style={{

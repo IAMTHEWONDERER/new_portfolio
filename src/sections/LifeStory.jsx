@@ -1,9 +1,15 @@
+import { useMemo } from 'react'
 import { motion } from 'framer-motion'
+import InteractiveStarsBg from '../components/InteractiveStarsBg'
 
 export default function LifeStory({ onGoBack }) {
     return (
-        <div className="bg-black text-white">
-            <div style={{ maxWidth: '640px', margin: '0 auto', padding: '40px 32px 120px' }}>
+        <div className="bg-transparent w-full" style={{ position: 'relative', minHeight: '100vh', color: '#FFF', overflowX: 'hidden' }}>
+            <InteractiveStarsBg />
+            {/* Optional slight dark tint to ensure text contrast over bright stars */}
+            <div className="absolute inset-0 bg-black/40 -z-0 pointer-events-none" />
+
+            <div style={{ position: 'relative', zIndex: 1, maxWidth: '640px', margin: '0 auto', padding: '40px 32px 120px' }}>
                 {/* Name */}
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}

@@ -435,7 +435,8 @@ function Planet({ data, onFocus, focusPlanet }) {
    ============================= */
 
 function CameraController({ focusPlanet, planets, controlsRef }) {
-    const { camera } = useThree()
+    const { camera, size } = useThree()
+    const isMobile = size.width < 768
     const defaultPos = useMemo(() => new THREE.Vector3(0, 18, 42), [])
     const planetPositions = useContext(PlanetPosContext)
     const lookTarget = useRef(new THREE.Vector3(0, 0, 0))
@@ -446,27 +447,30 @@ function CameraController({ focusPlanet, planets, controlsRef }) {
         let target = new THREE.Vector3(0, 0, 0)
 
         if (focusPlanet === 'Sun') {
-            // Sun focus — camera zooms in from the side, same system as planets
-            dest = new THREE.Vector3(7, 4, 12)
+            // Sun focus — center and zoom out on mobile, side offset on desktop
+            dest = isMobile ? new THREE.Vector3(0, 5, 24) : new THREE.Vector3(7, 4, 12)
             target = new THREE.Vector3(0, 0, 0)
-            fov = 35
+            fov = isMobile ? 45 : 35
         } else if (focusPlanet && planetPositions?.current[focusPlanet]) {
             const pos = planetPositions.current[focusPlanet]
             const pd = planets.find(p => p.name === focusPlanet)
             const r = pd ? pd.radius : 1
-            // Zoom closer for small planets, further for big ones
-            const camDist = Math.max(r * 6, 3)
+            // Zoom closer for small planets on desktop, back up a bit on mobile
+            const camDist = Math.max(r * 6, isMobile ? 5 : 3)
             // Camera between planet and sun (facing sun-lit side)
             const toSun = new THREE.Vector3(-pos.x, 0, -pos.z).normalize()
-            // Side offset — shift camera to the right so planet sits on left of screen
+            
+            // Side offset — shift camera to the right so planet sits on left of screen on desktop, centered on mobile
             const right = new THREE.Vector3(-toSun.z, 0, toSun.x)
+            const offsetMultiplier = isMobile ? 0 : r * 2.5
+            
             dest = new THREE.Vector3(
-                pos.x + toSun.x * camDist + right.x * r * 2.5,
-                r * 2.5,
-                pos.z + toSun.z * camDist + right.z * r * 2.5
+                pos.x + toSun.x * camDist + right.x * offsetMultiplier,
+                isMobile ? r * 3 : r * 2.5,
+                pos.z + toSun.z * camDist + right.z * offsetMultiplier
             )
             target = new THREE.Vector3(pos.x, pos.y, pos.z)
-            fov = r < 0.5 ? 30 : 40
+            fov = isMobile ? (r < 0.5 ? 45 : 50) : (r < 0.5 ? 30 : 40)
         }
 
         camera.position.lerp(dest, delta * 1.8)
