@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import gsap from 'gsap'
 import SolarSystem from '../components/SolarSystem'
 
@@ -61,6 +62,7 @@ const projects = [
 ]
 
 export default function Hero() {
+    const { t } = useTranslation()
     const underlineRef = useRef(null)
 
     useEffect(() => {
@@ -90,7 +92,7 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="section-stamp mb-3"
                     >
-                        MISSION CONTROL · PORTFOLIO
+                        {t('ui.mission_control')}
                     </motion.span>
 
                     {/* Name */}
@@ -119,7 +121,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="mt-4 font-ui text-sm md:text-base text-smoke uppercase tracking-[0.2em] max-w-xl"
                     >
-                        Full-Stack Developer · Creative Engineer · Builder
+                        {t('ui.tagline')}
                     </motion.p>
                 </div>
             </div>

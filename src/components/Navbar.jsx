@@ -1,15 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 
-const navLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Contact', href: '#contact' },
-]
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
+    const { t } = useTranslation()
     const [scrolled, setScrolled] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false)
+
+    const navLinks = useMemo(() => [
+        { label: t('nav.about'), href: '#about' },
+        { label: t('nav.experience'), href: '#experience' },
+        { label: t('nav.contact'), href: '#contact' },
+    ], [t])
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -45,8 +50,11 @@ export default function Navbar() {
                         </a>
                     ))}
                     <a href="#contact" className="btn-gold ml-4 text-xs py-2 px-5">
-                        Get in Touch
+                        {t('nav.cta')}
                     </a>
+                    <div className="ml-6">
+                        <LanguageSwitcher />
+                    </div>
                 </div>
 
                 {/* Mobile Hamburger */}
@@ -82,8 +90,11 @@ export default function Navbar() {
                                 </a>
                             ))}
                             <a href="#contact" className="btn-gold text-xs py-2 px-5 self-start mt-2">
-                                Get in Touch
+                                {t('nav.cta')}
                             </a>
+                            <div className="mt-4 pt-4 border-t border-ridge">
+                                <LanguageSwitcher />
+                            </div>
                         </div>
                     </motion.div>
                 )}

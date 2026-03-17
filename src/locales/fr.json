@@ -1,0 +1,121 @@
+{
+  "planets": {
+    "Venus": {
+      "title": "À Propos",
+      "subtitle": "Qui je suis",
+      "sections": [
+        {
+          "heading": "Le Début",
+          "text": "Je suis Oussama Alouche, ingénieur frontend basé au Maroc, passionné par la création d'expériences web évolutives et performantes que les utilisateurs adorent. Mon approche combine une architecture frontend moderne avec une technologie de pointe pour fournir des solutions à la fois visuellement époustouflantes et techniquement robustes."
+        },
+        {
+          "heading": "Le Métier",
+          "text": "Expert en React, TypeScript et systèmes de conception, je transforme des exigences complexes en interfaces élégantes et intuitives avec une UX exceptionnelle. Je me spécialise dans l'architecture frontend, l'optimisation des performances et l'intégration de l'IA — menant des équipes pour créer des produits qui ont un réel impact."
+        },
+        {
+          "heading": "Ce qui m'anime",
+          "text": "L'intersection de la créativité et de l'ingénierie. Le moment où le design rencontre la logique et où quelque chose de totalement nouveau émerge. Je crois en la création de logiciels qui se sentent vivants — des interfaces qui respirent, s'animent et répondent de manière à ravir les utilisateurs."
+        }
+      ]
+    },
+    "Earth": {
+      "title": "Expertise Technique",
+      "subtitle": "Le Stack",
+      "sections": [
+        {
+          "heading": "Frontend Moderne",
+          "text": "Expert en React.js, Next.js, TypeScript et Redux. Construction d'applications web évolutives et performantes avec une architecture orientée composants, des jetons de conception et des systèmes de conception responsive."
+        },
+        {
+          "heading": "UI/UX & Design Systems",
+          "text": "Des wireframes aux prototypes haute fidélité dans Figma. Maîtrise de Tailwind CSS, de l'accessibilité (WCAG), de la hiérarchie visuelle et de la création de bibliothèques de composants réutilisables."
+        },
+        {
+          "heading": "Backend & APIs",
+          "text": "Node.js, Express, Python/FastAPI, Supabase, PostgreSQL, MongoDB. Expérience avec les API REST, GraphQL, les webhooks et l'intégration de services tiers. Docker, Git, CI/CD et Vercel pour le déploiement."
+        },
+        {
+          "heading": "Intégration de l'IA",
+          "text": "API d'IA, protocoles de contexte de modèle (MCP), interfaces conversationnelles et flux de travail assistés par l'IA. Construction de fonctionnalités intelligentes qui améliorent les expériences utilisateur."
+        }
+      ]
+    },
+    "Mars": {
+      "title": "Projets Sélectionnés",
+      "subtitle": "Le Portfolio",
+      "sections": [
+        {
+          "heading": "Plateforme LMS ASANADA",
+          "text": "Frontend complet de système de gestion de l'apprentissage avec cours, quiz, forums, notifications en temps réel et mises en page responsives. Construit avec React.js, TypeScript et Tailwind CSS."
+        },
+        {
+          "heading": "Plateforme FOSTP",
+          "text": "Site web SSR haute performance utilisant Next.js avec synchronisation en temps réel, gestion des membres et formulaires multi-étapes. Propulsé par Tailwind CSS et Firebase."
+        },
+        {
+          "heading": "RMA-connect",
+          "text": "Frontend de gestion IoT pour stations de recharge électrique avec tableaux de bord de surveillance en temps réel et interfaces utilisateur multiplateformes. Construit avec React, Angular et Flutter."
+        },
+        {
+          "heading": "WorkWhile & Appart9",
+          "text": "Solution d'espace de travail innovante et plateformes immobilières modernes avec un design d'interface épuré, recherche avancée de propriétés, visites virtuelles et gestion complète des annonces."
+        },
+        {
+          "heading": "Design UI/UX",
+          "text": "AidUs — une plateforme complète de charité et de don conçue dans Figma. ITS — un marché moderne pour les matériaux de construction conçu avec Figma et Protopie."
+        }
+      ]
+    },
+    "Jupiter": {
+      "title": "Contactons-nous",
+      "subtitle": "Entrer en contact",
+      "sections": [
+        {
+          "heading": "Démarrer une Conversation",
+          "text": "Prêt à donner vie à votre vision ? Qu'il s'agisse d'une application web complexe, d'une expérience 3D immersive ou d'un produit alimenté par l'IA — discutons de votre prochain projet et créons quelque chose d'extraordinaire ensemble."
+        },
+        {
+          "heading": "Me Joindre",
+          "text": "Email : oussama.alouche@outlook.com\nTéléphone : +212 7 20 14 88 07\nGitHub : github.com/IAMTHEWONDERER\nLinkedIn : linkedin.com/in/oussama-alouche"
+        },
+        {
+          "heading": "Ce que je propose",
+          "text": "Développement Frontend • Design UI/UX • Intégration IA • Applications Web • Systèmes Backend • Design Systems. Solutions numériques complètes adaptées pour transformer votre vision en expériences utilisateur exceptionnelles."
+        }
+      ]
+    }
+  },
+  "nav": {
+    "about": "À Propos",
+    "experience": "Expérience",
+    "contact": "Contact",
+    "cta": "Me Joindre"
+  },
+  "life_story": {
+    "title": "Oussama Alouche",
+    "sections": [
+      {
+        "heading": "Le Début",
+        "text": "Chaque voyage commence par un seul pas. Le mien a commencé par la curiosité — un désir implacable de comprendre comment les choses fonctionnent, comment les systèmes se connectent et comment la technologie peut remodeler notre façon de vivre le monde."
+      },
+      {
+        "heading": "Le Métier",
+        "text": "J'écris du code. Je concois des systèmes. Je construis des ponts entre les idées et la réalité. Des applications full-stack aux expériences 3D immersives, je suis fier de créer des choses à la fois fonctionnelles et belles — conçues avec précision, livrées avec soin."
+      },
+      {
+        "heading": "La Mission",
+        "text": "Je crois en la construction avec un but. Chaque ligne de code doit servir l'utilisateur. Chaque interface doit raconter une histoire. Chaque système doit évoluer. Je ne construis pas seulement des logiciels — je construis l'avenir, un projet à la fois."
+      },
+      {
+        "heading": "Ce qui m'anime",
+        "text": "L'intersection de la créativité et de l'ingénierie. Le moment où le design rencontre la logique et où quelque chose de totalement nouveau émerge. Je suis attiré par les défis qui repoussent les limites — des projets qui exigent à la fois une profondeur technique et une vision créative."
+      }
+    ]
+  },
+  "ui": {
+    "return": "Retour au Système",
+    "back": "Retour au système",
+    "mission_control": "CONTRÔLE DE MISSION · PORTFOLIO",
+    "tagline": "Développeur Full-Stack · Ingénieur Créatif · Bâtisseur"
+  }
+}
