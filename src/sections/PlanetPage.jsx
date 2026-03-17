@@ -9,64 +9,92 @@ const PLANET_CONTENT = {
     Venus: {
         number: '01',
         title: 'About Me',
-        subtitle: 'Introduction',
+        subtitle: 'Who I Am',
         color: '#E8D5A3',
         sections: [
             {
                 heading: 'The Beginning',
-                text: 'A passionate software engineer and creative technologist with a deep love for building immersive digital experiences. From an early age, the intersection of art and technology sparked a curiosity that continues to drive everything I create.',
+                text: "I'm Oussama Alouche, a Frontend Engineer based in Morocco, passionate about crafting scalable, high-performance web experiences that users love. My approach combines modern frontend architecture with cutting-edge technology to deliver solutions that are both visually stunning and technically robust.",
             },
             {
-                heading: 'Who I Am',
-                text: 'I believe in crafting software that feels alive — interfaces that breathe, animate, and respond in ways that delight users. Every pixel, every transition, every interaction is an opportunity to tell a story.',
+                heading: 'The Craft',
+                text: 'With expertise in React, TypeScript, and design systems, I transform complex requirements into elegant, intuitive interfaces with exceptional UX. I specialize in frontend architecture, performance optimization, and AI integration — leading teams to build products that make a real impact.',
+            },
+            {
+                heading: 'What Drives Me',
+                text: 'The intersection of creativity and engineering. The moment when design meets logic and something entirely new emerges. I believe in crafting software that feels alive — interfaces that breathe, animate, and respond in ways that delight users. Every pixel, every transition, every interaction is an opportunity to tell a story.',
             },
         ],
     },
     Earth: {
         number: '02',
-        title: 'Education & Skills',
-        subtitle: 'The Foundation',
+        title: 'Technical Expertise',
+        subtitle: 'The Stack',
         color: '#4A7AB5',
         sections: [
             {
-                heading: 'Academic Journey',
-                text: 'Studied computer science with a focus on interactive systems and visual computing. Built a strong foundation in algorithms, data structures, and system design while pursuing creative projects on the side.',
+                heading: 'Modern Frontend',
+                text: 'Expert in React.js, Next.js, TypeScript, and Redux. Building scalable, high-performance web applications with component-driven architecture, design tokens, and responsive design systems that maintain cross-platform consistency.',
             },
             {
-                heading: 'Technical Stack',
-                text: 'Proficient in React, Three.js, TypeScript, Node.js, Python, and modern web technologies. Experienced with 3D graphics, WebGL, shader programming, and building performant real-time applications.',
+                heading: 'UI/UX & Design Systems',
+                text: 'From wireframes to high-fidelity prototypes in Figma. Proficient in Tailwind CSS, accessibility (WCAG), visual hierarchy, and creating reusable component libraries with comprehensive documentation.',
+            },
+            {
+                heading: 'Backend & APIs',
+                text: 'Node.js, Express, Python/FastAPI, Supabase, PostgreSQL, MongoDB. Experienced with REST APIs, GraphQL, webhooks, and third-party service integration. Docker, Git, CI/CD, and Vercel for deployment.',
+            },
+            {
+                heading: 'AI Integration',
+                text: 'AI APIs, Model Context Protocols (MCPs), conversational interfaces, and AI-assisted workflows. Building intelligent features that enhance user experiences with cutting-edge AI technology.',
             },
         ],
     },
     Mars: {
         number: '03',
-        title: 'Experience',
-        subtitle: 'The Journey',
+        title: 'Selected Work',
+        subtitle: 'The Portfolio',
         color: '#C1440E',
         sections: [
             {
-                heading: 'Professional Path',
-                text: 'Worked across startups and established companies, building everything from customer-facing web applications to internal tools and creative installations. Each role shaped a deeper understanding of what makes software truly great.',
+                heading: 'ASANADA LMS Platform',
+                text: 'Full learning management system frontend with courses, quizzes, forums, real-time notifications and responsive layouts. Built with React.js, TypeScript, and Tailwind CSS.',
             },
             {
-                heading: 'Key Achievements',
-                text: 'Led frontend architecture migrations, built real-time collaboration tools, shipped products used by thousands, and mentored junior developers. Always pushing for cleaner code, better UX, and more ambitious projects.',
+                heading: 'FOSTP Platform',
+                text: 'High-performance SSR website using Next.js with real-time synchronization, member management, and multi-step forms. Powered by Tailwind CSS and Firebase.',
+            },
+            {
+                heading: 'RMA-connect',
+                text: 'IoT management frontend for electric charging stations with real-time monitoring dashboards and cross-platform user interfaces. Built with React, Angular, and Flutter.',
+            },
+            {
+                heading: 'WorkWhile & Appart9',
+                text: 'Innovative workspace solution and modern real estate platforms with clean interface design, advanced property search, virtual tours, and comprehensive listing management. Built with React, Node.js, MongoDB, and PostgreSQL.',
+            },
+            {
+                heading: 'UI/UX Design',
+                text: 'AidUs — a comprehensive charity and donation platform designed in Figma. ITS — a modern marketplace for construction materials designed with Figma and Protopie. Intuitive donation flows, community engagement, and seamless ordering experiences.',
             },
         ],
     },
     Jupiter: {
         number: '04',
-        title: 'Projects',
-        subtitle: 'The Portfolio',
+        title: "Let's Connect",
+        subtitle: 'Get In Touch',
         color: '#C4A46C',
         sections: [
             {
-                heading: 'Creative Works',
-                text: 'From interactive 3D visualizations to AI-powered applications, every project is an exploration of what\'s possible. Building tools that solve real problems while delivering experiences that inspire.',
+                heading: 'Start a Conversation',
+                text: "Ready to bring your vision to life? Whether it's a complex web application, an immersive 3D experience, or an AI-powered product — let's discuss your next project and create something extraordinary together.",
             },
             {
-                heading: 'Open Source',
-                text: 'Contributing to the developer community through open-source projects, technical writing, and knowledge sharing. Believe in building in public and lifting others as you climb.',
+                heading: 'Reach Out',
+                text: 'Email: oussama.alouche@outlook.com\nPhone: +212 7 20 14 88 07\nGitHub: github.com/IAMTHEWONDERER\nLinkedIn: linkedin.com/in/oussama-alouche',
+            },
+            {
+                heading: 'What I Deliver',
+                text: 'Frontend Development • UI/UX Design • AI Integration • Web Applications • Backend Systems • Design Systems. Comprehensive digital solutions tailored to transform your vision into exceptional user experiences that drive results.',
             },
         ],
     },
